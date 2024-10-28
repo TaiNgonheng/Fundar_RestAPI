@@ -29,12 +29,12 @@ public class StudentController {
 //        return  students;
 //    }
 //
-//    @GetMapping("student/{id}/{firstname}/{lastname}")
-//    public List<Student> studentPathVariable(@PathVariable("id") int studentid, @PathVariable("firstname") String stufirstname, @PathVariable("lastname") String stulastname){
-//        List<Student> students = new ArrayList<>();
-//        students.add(new Student(studentid,stufirstname,stulastname));
-//        return students;
-//    }
+    @GetMapping("student/{id}/{firstname}/{lastname}")
+    public List<Student> studentPathVariable(@PathVariable("id") int studentid, @PathVariable("firstname") String stufirstname, @PathVariable("lastname") String stulastname){
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(studentid,stufirstname,stulastname));
+        return students;
+    }
     @GetMapping("student/{id}/{firstname}/{lastname}")
     public Student studentpathvariable(@PathVariable("id") int stuId,
                                        @PathVariable("firstname") String stufirstname,
