@@ -35,12 +35,12 @@ public class StudentController {
 //        students.add(new Student(studentid,stufirstname,stulastname));
 //        return students;
 //    }
-//    @GetMapping("student/{id}/{firstname}/{lastname}")
-//    public Student studentpathvariable(@PathVariable("id") int stuId,
-//                                       @PathVariable("firstname") String stufirstname,
-//                                       @PathVariable("lastname") String stuLastname){
-//        return new Student(stuId,stufirstname,stuLastname);
-//   }
+    @GetMapping("student/{id}/{firstname}/{lastname}")
+    public Student studentpathvariable(@PathVariable("id") int stuId,
+                                       @PathVariable("firstname") String stufirstname,
+                                       @PathVariable("lastname") String stuLastname){
+        return new Student(stuId,stufirstname,stuLastname);
+   }
     @GetMapping("student/hi")
     public Student studentRequestparam(@RequestParam int id,
                                        @RequestParam String firstname,
