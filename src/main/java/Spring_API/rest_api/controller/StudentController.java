@@ -19,16 +19,16 @@ public class StudentController {
         return ResponseEntity.ok(student1);
     }
 
-//    @GetMapping("student")
-//    public List<Student> getstudent(){
-//        List<Student> students = new ArrayList<>();
-//        students.add(new Student(1,"heng","zuckerberg"));
-//        students.add(new Student(2,"Elon","musk"));
-//        students.add(new Student(3,"bernart","annualt"));
-//        students.add(new Student(4,"Jeff","Bezos"));
-//        return  students;
-//    }
-//
+    @GetMapping("student")
+    public List<Student> getstudent(){
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(1,"heng","zuckerberg"));
+        students.add(new Student(2,"Elon","musk"));
+        students.add(new Student(3,"bernart","annualt"));
+        students.add(new Student(4,"Jeff","Bezos"));
+        return  students;
+    }
+
     @GetMapping("student/{id}/{firstname}/{lastname}")
     public List<Student> studentPathVariable(@PathVariable("id") int studentid, @PathVariable("firstname") String stufirstname, @PathVariable("lastname") String stulastname){
         List<Student> students = new ArrayList<>();
