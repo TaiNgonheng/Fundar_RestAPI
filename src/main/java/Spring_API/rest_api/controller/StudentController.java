@@ -41,12 +41,12 @@ public class StudentController {
 //                                       @PathVariable("lastname") String stuLastname){
 //        return new Student(stuId,stufirstname,stuLastname);
 //   }
-//    @GetMapping("student/hi")
-//    public Student studentRequestparam(@RequestParam int id,
-//                                       @RequestParam String firstname,
-//                                       @RequestParam String lastname){
-//        return new Student(id,firstname,lastname);
-//    }
+    @GetMapping("student/hi")
+    public Student studentRequestparam(@RequestParam int id,
+                                       @RequestParam String firstname,
+                                       @RequestParam String lastname){
+        return new Student(id,firstname,lastname);
+    }
     @PostMapping("student/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Student createStudent(@RequestBody Student student){
